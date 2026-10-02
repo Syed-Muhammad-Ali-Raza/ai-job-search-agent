@@ -1,0 +1,26 @@
+{
+  "name": "career-copilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MERN microservices AI Career Copilot — job discovery agents",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:gateway": "npm run dev -w @career-copilot/gateway",
+    "dev:auth": "npm run dev -w @career-copilot/auth-service",
+    "dev:profile": "npm run dev -w @career-copilot/profile-service",
+    "dev:job": "npm run dev -w @career-copilot/job-service",
+    "dev:agent": "npm run dev -w @career-copilot/agent-service",
+    "dev:notification": "npm run dev -w @career-copilot/notification-service",
+    "dev:web": "npm run dev -w @career-copilot/web",
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build -w @career-copilot/shared"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
